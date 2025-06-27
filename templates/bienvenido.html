@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container welcome-container">
+        <h2>¡Bienvenido!</h2>
+        <p>Has iniciado sesión correctamente. Este es tu contenido restringido para alumnos.</p>
+        
+        <p style="margin-top: 30px;">
+            <a href="http://localhost:3000/" class="logout-link">PORTAL DE ESTUDIANTE</a> 
+        </p>
+
+        <p style="margin-top: 15px;"><a href="{{ url_for('logout') }}" class="logout-link">Cerrar Sesión</a></p>
+    </div>
+</body>
+</html>
