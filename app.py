@@ -4,6 +4,9 @@ from werkzeug.security import generate_password_hash, check_password_hash
 import os
 from functools import wraps 
 
+
+
+
 app = Flask(__name__)
 # ¡IMPORTANTE! Cambia esto por una cadena de texto larga y aleatoria y mantenla en secreto.
 # Se usa para proteger las sesiones de usuario.
@@ -14,8 +17,8 @@ DATABASE = 'users.db'
 
 # --- CREDENCIALES DEL ADMINISTRADOR ---
 # ¡IMPORTANTE! Cambia estas credenciales por algo seguro.
-ADMIN_USERNAME = "555"
-ADMIN_PASSWORD = "555"
+ADMIN_USERNAME = "ADMIN2025"
+ADMIN_PASSWORD = "ADMIN2025"
 
 # --- Funciones para la Base de Datos ---
 
@@ -116,8 +119,7 @@ def logout():
 @app.route('/acceso_mi_pagina_secreta') 
 @login_required 
 def mostrar_mi_pagina_secreta():
-    return render_template('otras_paginas/mi_pagina_secreta.html') 
-
+    return render_template('http://localhost:3000/') 
 
 @app.route('/bienvenido')
 @login_required 
